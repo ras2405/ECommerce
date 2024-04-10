@@ -1,0 +1,16 @@
+<div class="row w-100" style="overflow: hidden;">
+    <div class="col-md-9" style="overflow-y: auto; height: 90vh;">
+        <app-purchase-item
+            *ngFor="let product of purchase?.products; let i = index" 
+            [product]="product" 
+        >
+        </app-purchase-item>
+    </div>
+
+    <div class="col-md-3">
+        <app-purchase-summary 
+            [purchase]="purchase"
+        >
+        </app-purchase-summary>
+    </div>
+</div>

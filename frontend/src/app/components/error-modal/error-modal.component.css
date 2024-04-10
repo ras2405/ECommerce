@@ -1,0 +1,32 @@
+.modal-content {
+    background-color: #f8d7da; 
+    color: #721c24; 
+  }
+  
+  .modal-header {
+    background-color: #dc3545; 
+    color: #fff; 
+    border-bottom: 1px solid #c3c3c3; 
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .modal-body {
+    padding: 20px; 
+  }
+  
+  .close {
+    color: #fff; 
+    font-size: 1.25rem; 
+  }
+  
+  .close:hover {
+    color: #f8d7da;
+  }
+  
+  .modal-content {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  

@@ -1,0 +1,200 @@
+<p></p>
+<div class="spacing-right spacing-left">
+  <button class="btn btn-lg btn-primary" style="background-color: var(--secondary-color);" (click)="open(offcanvas)">Filter Products</button>
+  <button class="btn btn-lg btn-primary spacing-left" style="background-color: var(--secondary-color);" *ngIf="isAdmin()" (click)="openModal(content)">Add new
+    product</button>
+</div>
+
+<p></p>
+<div *ngIf="products && products.length; else noProducts">
+  <div class="row mx-auto justify-content-left spacing-elem">
+    <div class="col-lg-3 col-md-3 col-sm-4 mb-4 d-flex align-items-center" *ngFor="let product of products"
+      [routerLink]="['/products/', product.id]">
+      <div class="text-center card-bg">
+        <img src="/assets/product.png" class="card-img-top" alt="{{ product.name }}" />
+        <h5>{{ product.name }}</h5>
+        <p>${{ product.price }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noProducts>
+  <div *ngIf="!loading || products?.length == 0">
+    <h4 style="text-align:center;">Sorry, there are no available products.</h4>
+  </div>
+</ng-template>
+
+<ng-template #loading>
+  <h4 style="text-align:center;">Loading...</h4>
+</ng-template>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Create a new Product</h4>
+    <p></p>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="prodName">Product name:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="prodName" [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="newProd.name" required>
+        </div>
+        <p></p>
+
+        <label for="prodDesc">Description:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="prodDesc" [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="newProd.description" required>
+        </div>
+        <p></p>
+
+        <div class="row">
+          <div class="col-md-6">
+            <label for="prodStock">Stock:</label>
+            <div class="input-group">
+              <input type="number" class="form-control" id="prodStock" [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="newProd.stock" required>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label for="prodPrice">Price:</label>
+            <div class="input-group">
+              <input type="number" class="form-control" id="prodPrice" [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="newProd.price" required>
+            </div>
+          </div>
+        </div>
+        <p></p>
+
+        <label for="prodBrand">Brand:</label>
+        <div class="input-group">
+          <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary spacing-left" id="dropdownBasic1" ngbDropdownToggle>
+              {{ newProd.brand.brandName || 'Choose a Brand' }}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button ngbDropdownItem *ngFor="let brand of brands" (click)="newProd.brand.brandName = brand"
+                required>{{brand}}</button>
+            </div>
+          </div>
+        </div>
+        <p></p>
+
+        <label for="dateOfBirth">Category:</label>
+        <div class="input-group">
+          <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-outline-primary spacing-left" id="dropdownBasic2" ngbDropdownToggle>
+              {{ newProd.category.categoryName || 'Choose a Category' }}
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+              <button ngbDropdownItem *ngFor="let category of categories" (click)="newProd.category.categoryName = category"
+                required>{{category}}</button>
+            </div>
+          </div>
+        </div>
+        <p></p>
+
+        <label>Color/s:</label>
+            <div class="form-check spacing-left" *ngFor="let color of colors">
+               <input class="form-check-input" type="checkbox" [ngModelOptions]="{standalone: true}"
+                      [(ngModel)]="selectedColors[color]" />
+               <label class="form-check-label">
+                 {{color}}
+               </label>
+             </div>
+            <p></p>
+        <p></p>
+
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" [ngModelOptions]="{standalone: true}"
+            [(ngModel)]="newProd.promotionExcluded" />
+          <label class="form-check-label" for="flexCheckDefault">
+            Exclude Promotions
+          </label>
+        </div>
+        <p></p>
+        <div *ngIf="errorResponse" class="text-danger mt-2">
+          {{ errorResponse.errorMessage }}
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="saveProduct()">Save</button>
+  </div>
+</ng-template>
+
+<ng-template #offcanvas>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title">Filter Products</h4>
+    <button type="button" class="btn-close text-reset" aria-label="Close" (click)="dismiss()"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="form-outline mb-4">
+      <label class=" h5 form-label" for="user.address" style="margin-right: 10px;">Categories:</label>
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+          {{ currentCategory || 'Choose a Category' }}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="selectCategory(undefined)">-- Deselect --</button>
+          <button ngbDropdownItem *ngFor="let category of categories"
+            (click)="currentCategory = category">{{category}}</button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="form-outline mb-4">
+      <label class="h5 form-label" for="user.address" style="margin-right: 10px;">Brand:</label>
+      <div ngbDropdown class="d-inline-block">
+        <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+          {{ currentBrand || 'Choose a Brand' }}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem (click)="selectBrand(undefined)">-- Deselect --</button>
+          <button ngbDropdownItem *ngFor="let brand of brands" (click)="currentBrand = brand">{{brand}}</button>
+        </div>
+      </div>
+    </div>
+  
+    <p></p>
+  
+    <h5>Text:</h5>
+    <input type="text" class="form-control" [(ngModel)]="currentText" />
+    <p></p>
+  
+    <h5>Price:</h5>
+    <div class="row">
+      <div class="col-md-6">
+        <h6>Min:</h6>
+        <input type="number" class="form-control" [(ngModel)]="min" />
+      </div>
+      <div class="col-md-6">
+        <h6>Max:</h6>
+        <input type="number" class="form-control" [(ngModel)]="max" />
+      </div>
+    </div>
+    <p></p>
+  
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" [(ngModel)]="promo" />
+      <label class="form-check-label" for="flexCheckDefault">
+        Include Promotions
+      </label>
+    </div>
+    <p></p>
+  
+    <div>
+    <button class="btn btn-lg btn-outline-primary spacing-right" (click)="filter()">
+      Filter
+    </button>
+    <button class="btn btn-lg btn-outline-primary" (click)="ngOnInit()">
+      Reset filters
+    </button>
+  </div>
+  </div>
+</ng-template>

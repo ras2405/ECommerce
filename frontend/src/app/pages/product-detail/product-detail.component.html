@@ -1,0 +1,114 @@
+<p></p>
+<div class="spacing-left">
+   <button class="btn btn-lg btn-outline-primary" [routerLink]="['/products/']">Go Back</button>
+</div>
+
+<div class="container mt-5" *ngIf="currentProduct | async as product; else loading">
+   <div class="row">
+      <div class="col-md-6">
+         <img src="/assets/product.png" alt="{{ product.name }}" class="img-fluid" />
+      </div>
+      <div class="col-md-6">
+         <h2>{{ product.name }}</h2>
+         <p></p>
+
+         <p class="lead">Price: ${{ product.price }}</p>
+         <h6>{{ promotionExcluded }}</h6>
+         <p></p>
+
+         <p></p>
+         <hr>
+         <h5><u>About this item</u></h5>
+         <p>{{ product.description }}</p>
+
+         <p>Brand: {{ product.brand.brandName }}</p>
+         <p>Category: {{ product.category.categoryName }}</p>
+         <p>Color/s:
+            <ng-container *ngFor="let color of product.colors; let last = last">
+               {{ color.colorName }}{{ !last ? ',' : '' }}
+             </ng-container>
+         </p>
+         <p></p>
+
+         <div class="mt-4">
+            <button class="btn btn-primary spacing-right" style="background-color: var(--secondary-color);" *ngIf="isBuyerOrBoth()" (click)="addToCart()">Add to Cart</button>
+            <button class="btn btn-primary spacing-right" style="background-color: var(--secondary-color);" *ngIf="isAdmin()" (click)="openModal(edit)">Edit Product</button>
+            <button class="btn btn-primary spacing-right" style="background-color: var(--secondary-color);" *ngIf="isAdmin()" (click)="openDeleteModal(delete)">Delete Product</button>
+         </div>
+         <p></p>
+      </div>
+   </div>
+</div>
+
+<ng-template #loading>
+   <h4 style="text-align:center;">Loading...</h4>
+</ng-template>
+
+<ng-template #edit let-modal>
+   <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Edit Product</h4>
+      <p></p>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+   </div>
+   <div class="modal-body">
+      <form>
+         <div class="mb-3">
+            <div class="form-group">
+               <label for="prodName">Product name:</label>
+               <input type="text" class="form-control" id="prodName" [ngModelOptions]="{standalone: true}"
+                  [(ngModel)]="newProd.name" required>
+            </div>
+            <p></p>
+
+            <div class="form-group">
+               <label for="prodDesc">Description: </label>
+               <input type="text" class="form-control" id="prodDesc" [ngModelOptions]="{standalone: true}"
+                  [(ngModel)]="newProd.description" required>
+            </div>
+            <p></p>
+
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="prodStock">Stock:</label>
+                     <input type="number" class="form-control" id="prodStock" [ngModelOptions]="{standalone: true}"
+                        [(ngModel)]="newProd.stock" required>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="form-group">
+                     <label for="prodPrice">Price:</label>
+                     <input type="number" class="form-control" id="prodPrice" [ngModelOptions]="{standalone: true}"
+                        [(ngModel)]="newProd.price" required>
+                  </div>
+               </div>
+            </div>
+            <p></p>
+
+            <div *ngIf="errorResponse" class="text-danger mt-2">
+               {{ errorResponse.errorMessage }}
+           </div>
+         </div>
+      </form>
+   </div>
+   <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="editProduct()">Save</button>
+   </div>
+</ng-template>
+
+<ng-template #delete let-modal>
+   <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Delete Product</h4>
+      <p></p>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+   </div>
+   <div class="modal-body" *ngIf="currentProduct | async as product; else loading">
+      <h6>Are you sure you want to delete this product?: {{product.name}}</h6>
+      <div *ngIf="errorResponse" class="text-danger mt-2">
+         {{ errorResponse.errorMessage }}
+     </div>
+   </div>
+   <div class="modal-footer">
+      <button type="button" class="btn btn-danger" (click)="deleteProduct()">Delete</button>
+   </div>
+</ng-template>

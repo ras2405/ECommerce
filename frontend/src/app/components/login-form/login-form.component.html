@@ -1,0 +1,23 @@
+<form class="py-4">
+    <div class="form-outline mb-4">
+        <label class="form-label" for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="email" class="form-control" />
+        <div *ngIf="responseError?.errors" class="text-danger mt-2">
+            {{ responseError?.errors.Email[0] }}
+        </div>
+    </div>
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" class="form-control" />
+        <div *ngIf="responseError?.errors" class="text-danger mt-2">
+            {{ responseError?.errors.Password[0] }}
+        </div>
+    </div>
+
+    <div *ngIf="responseError?.errorMessage" class="text-danger my-2">
+        {{ responseError?.errorMessage }}
+    </div>
+
+    <button type="submit" (click)="onSubmit()" class="btn btn-primary btn-block mb-4">Log in</button>
+</form>

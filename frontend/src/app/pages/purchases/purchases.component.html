@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <div class="mt-4">
+        <h3 class="mb-3">E-Commerce Purchases</h3>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Payment Method</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Discount</th>
+                    <th scope="col">Promotion</th>
+                    <th scope="col">Detail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let purchase of purchasesList; let i = index">
+                    <th scope="row">{{ i + 1 }}</th>
+                    <td>{{ purchase.date | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+                    <td>{{ getPaymentMethodText(purchase.paymentMethod) }}</td>
+                    <td>{{ getPrice(purchase.products, purchase.promotion.amount)}}</td>
+                    <td>{{ purchase.promotion.amount }}</td>
+                    <td>{{ getPromotionTypeText(purchase.promotion.type) }}</td>
+                    <td>
+                      <button class="btn btn-primary" (click)="goToPurchaseDetails(purchase.id)">Detail</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

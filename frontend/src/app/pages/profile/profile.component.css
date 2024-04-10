@@ -1,0 +1,12 @@
+.error-input {
+    border-color: #ff0000; 
+  }
+
+.btn-primary{
+  margin-right: 20px;
+}
+
+.custom-toast-class {
+  background-color: #ff8080; 
+  color: #ffffff; 
+}

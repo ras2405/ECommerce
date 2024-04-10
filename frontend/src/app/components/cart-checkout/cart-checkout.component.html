@@ -1,0 +1,147 @@
+<div class="mt-3">
+    <div>
+        <h5 class="section-title mb-3">Order Summary</h5>
+
+        <div class="d-flex flex-row justify-content-between">
+            <h6>Subtotal:</h6>
+            <h6 style="color: var(--secondary-color);">${{getSubtotal()}}</h6>
+        </div>
+        <div>
+            <div class="d-flex flex-row justify-content-between">
+                <h6>Discount:</h6>
+                <h6 style="color: var(--secondary-color);">${{discount}}</h6>
+            </div>
+            <h6 style="text-align: end; font-weight: 400; font-size: small; font-style: italic;">
+                Promotions: {{promotionApplied}}
+            </h6>
+        </div>
+        <div class="d-flex flex-row justify-content-between">
+            <h5>Total:</h5>
+            <h5 style="color: var(--secondary-color);">${{getTotal()}}</h5>
+        </div>
+    </div>
+
+    <hr class="my-3" style="border-color: gray">
+
+    <div>
+        <h5 class="section-title mb-3">Payment Method</h5>
+
+        <table class="table">
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="vertical-align: top;">
+                    <label style="color: var(--secondary-color);">Credit Card:</label>
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input 
+                            type="radio" 
+                            id="visa"
+                            name="creditCard" 
+                            class="form-check-input"
+                            [(ngModel)]="paymentMethod" 
+                            [value]="0" 
+                            [checked]="paymentMethod === 0"
+                        >
+                        <label for="visa" class="form-check-label">Visa</label>
+                    </div>
+                    <div class="form-check">
+                        <input 
+                            type="radio" 
+                            id="mastercard"
+                            name="creditCard" 
+                            class="form-check-input"
+                            [(ngModel)]="paymentMethod" 
+                            [value]="1" 
+                            [checked]="paymentMethod === 1"
+                        >
+                        <label for="mastercard" class="form-check-label">MasterCard</label>
+                    </div>
+                </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #ddd;">
+                <td style="vertical-align: top;">
+                    <label style="color: var(--secondary-color);">Bank Debits:</label>
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input 
+                            type="radio"
+                            id="santander"
+                            name="debitCard"
+                            class="form-check-input"
+                            [(ngModel)]="paymentMethod" 
+                            [value]="2" 
+                            [checked]="paymentMethod === 2"
+                        >
+                        <label for="santander" class="form-check-label">Santander</label>
+                    </div>
+                    <div class="form-check">
+                        <input 
+                            type="radio"
+                            id="itau"
+                            name="debitCard"
+                            class="form-check-input"
+                            [(ngModel)]="paymentMethod"
+                            [value]="3" 
+                            [checked]="paymentMethod === 3"
+                        >
+                        <label for="itau" class="form-check-label">Itau</label>
+                    </div>
+                    <div class="form-check">
+                        <input
+                            type="radio"
+                            id="bbva"
+                            name="debitCard"
+                            class="form-check-input"
+                            [(ngModel)]="paymentMethod"
+                            [value]="4" 
+                            [checked]="paymentMethod === 4"
+                        >
+                        <label for="bbva" class="form-check-label">BBVA</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top;">
+                    <label style="color: var(--secondary-color);">Other Methods:</label>
+                </td>
+                <td>
+                    <div class="form-check">
+                        <input
+                            type="radio"
+                            id="paypal"
+                            name="otherMethod"
+                            class="form-check-input"
+                            [(ngModel)]="paymentMethod"
+                            [value]="5" 
+                            [checked]="paymentMethod === 5"
+                        >
+                        <label for="paypal" class="form-check-label">Paypal</label>
+                    </div>
+                    <div class="form-check">
+                        <input
+                            type="radio"
+                            id="paganza"
+                            name="otherMethod"
+                            class="form-check-input"
+                            [(ngModel)]="paymentMethod"
+                            [value]="6" 
+                            [checked]="paymentMethod === 6"
+                        >
+                        <label for="paganza" class="form-check-label">Paganza</label>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <hr class="my-3" style="border-color: gray">
+
+    <button
+        class="btn btn-primary w-100"
+        style="background-color: var(--secondary-color);"
+        (click)="buy()"
+    >
+        Buy
+    </button>
+</div>

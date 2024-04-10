@@ -1,0 +1,646 @@
+{
+	"info": {
+		"_postman_id": "3d1c2d89-5154-4153-bc04-c84f83dc98c7",
+		"name": "ECommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29475293"
+	},
+	"item": [
+		{
+			"name": "Purchases",
+			"item": [
+				{
+					"name": "Create a purchase",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "e0317c8c-3e10-40a3-84d3-dce3ae7dcba7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"UserId\": \"f5aaed66-8990-44df-8d81-08dbc5e72858\",\r\n    \"Products\": [\r\n        {\r\n            \"id\": \"d7e91571-562e-4a07-8a59-08dbc5e9a6c7\",\r\n            \"name\": \"prod1\",\r\n            \"description\": \"description1\",\r\n            \"price\": 100,\r\n            \"brand\": \"brand1\",\r\n            \"category\": \"category1\",\r\n            \"color\": \"color1\"\r\n        }\r\n    ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/purchases",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"purchases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all purchases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/purchases",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"purchases"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get purchase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/purchases/dec52455-8b62-4c6e-8986-ba209be0e40a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"purchases",
+								"dec52455-8b62-4c6e-8986-ba209be0e40a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user purchases",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/purchases?userId=59a0b1fd-105d-4197-c222-08dbc404f98a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"purchases"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "59a0b1fd-105d-4197-c222-08dbc404f98a"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Create a product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a605aed0-20e2-4285-806c-24b1849494d3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"prod4\",\r\n    \"Brand\": \"brand4\",\r\n    \"Color\": \"color4\",\r\n    \"Category\": \"category4\",\r\n    \"Description\": \"description4\",\r\n    \"Price\": 400\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/products",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get products with filters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/products?category=category&brand=brand&text=text",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "category"
+								},
+								{
+									"key": "brand",
+									"value": "brand"
+								},
+								{
+									"key": "text",
+									"value": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/products/c5fd2fc5-d43d-4df5-a204-08dbc5f0aab5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"products",
+								"c5fd2fc5-d43d-4df5-a204-08dbc5f0aab5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a605aed0-20e2-4285-806c-24b1849494d3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"prod5\",\r\n    \"Brand\": \"brand5\",\r\n    \"Color\": \"color5\",\r\n    \"Category\": \"category5\",\r\n    \"Description\": \"description5\",\r\n    \"Price\": 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/products/c5fd2fc5-d43d-4df5-a204-08dbc5f0aab5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"products",
+								"c5fd2fc5-d43d-4df5-a204-08dbc5f0aab5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "a605aed0-20e2-4285-806c-24b1849494d3",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/products/c5fd2fc5-d43d-4df5-a204-08dbc5f0aab5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"products",
+								"c5fd2fc5-d43d-4df5-a204-08dbc5f0aab5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"mail@mail.com\",\r\n    \"Password\": \"password\",\r\n    \"Address\": \"address\",\r\n    \"Rol\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create buyer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"mailBuyer@mail.com\",\r\n    \"Password\": \"password\",\r\n    \"Address\": \"address\",\r\n    \"Rol\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create admin-buyer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"mailAB@mail.com\",\r\n    \"Password\": \"password\",\r\n    \"Address\": \"address\",\r\n    \"Rol\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get own user data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "e0317c8c-3e10-40a3-84d3-dce3ae7dcba7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/users/f5aaed66-8990-44df-8d81-08dbc5e72858",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"users",
+								"f5aaed66-8990-44df-8d81-08dbc5e72858"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit own user data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "e0317c8c-3e10-40a3-84d3-dce3ae7dcba7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Email\": \"mailBuyer@mail.com\",\r\n    \"Password\": \"password\",\r\n    \"Address\": \"new address\",\r\n    \"Rol\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/users/f5aaed66-8990-44df-8d81-08dbc5e72858",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"users",
+								"f5aaed66-8990-44df-8d81-08dbc5e72858"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7019/api/users/f5aaed66-8990-44df-8d81-08dbc5e72858",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"users",
+								"f5aaed66-8990-44df-8d81-08dbc5e72858"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Session",
+			"item": [
+				{
+					"name": "Login buyer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"f5aaed66-8990-44df-8d81-08dbc5e72858\",\r\n    \"email\": \"mailBuyer@mail.com\",\r\n    \"address\": \"address\",\r\n    \"password\": \"password\",\r\n    \"rol\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/session",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"fb0bf75c-4571-44be-8d80-08dbc5e72858\",\r\n    \"email\": \"mail@mail.com\",\r\n    \"address\": \"address\",\r\n    \"password\": \"password\",\r\n    \"rol\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/session",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login admin-buyer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"2a49d650-7cd9-4a4b-8d82-08dbc5e72858\",\r\n    \"email\": \"mailAB@mail.com\",\r\n    \"address\": \"address\",\r\n    \"password\": \"password\",\r\n    \"rol\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/session",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"session"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "5b435d8e-c920-4172-91f9-3c3258beec24",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7019/api/session",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7019",
+							"path": [
+								"api",
+								"session"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

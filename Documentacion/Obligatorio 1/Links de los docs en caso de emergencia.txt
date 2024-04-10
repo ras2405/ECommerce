@@ -1,0 +1,6 @@
+Evidencia del Diseño y Especificacion API - https://docs.google.com/document/d/1_DdNBkPcUEzRgKYmgX3V-G_TgrjtVNnlTv9-lEqEhDY/edit?usp=sharing 
+Descripción de Diseño - https://docs.google.com/document/d/1dM_FH_BDz6HTnpF4n1cTeMDUfoJ18MV4c3yxcJhtBS0/edit?usp=sharing 
+Evidencia de Clean Code y TDD - https://docs.google.com/document/d/1bYQcIdS4f1UbCOtJYOMjObEKevv8fHSvBu1It8KyZzY/edit?usp=sharing 
+Evidencia de la  ejecución de las  pruebas de la API  con Postman - https://docs.google.com/document/d/1Iz_V8dnNPSM88fA15vYhWauxcXrt_PxzF8SFfGJlo84/edit?usp=sharing
+Link al video en YouTube - https://www.youtube.com/watch?v=Mo39Tbi6L1s 
+Link a Tabla de Endpoints - https://docs.google.com/spreadsheets/d/1CXlDMliEeYI4Aqq0ohmeIbfAvdva2zUQefBsgwjHvqU/edit?usp=sharing 

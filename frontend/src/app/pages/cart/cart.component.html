@@ -1,0 +1,14 @@
+<div class="row w-100" style="overflow: hidden;">
+    <div class="col-md-9" style="overflow-y: auto; height: 90vh;">
+        <app-cart-item 
+            *ngFor="let product of cart; let i = index" 
+            [product]="product" 
+            (deleteClicked)="onItemDelete(i)"
+        >
+        </app-cart-item>
+    </div>
+
+    <div class="col-md-3">
+        <app-cart-checkout [cart]="cart"></app-cart-checkout>
+    </div>
+</div>

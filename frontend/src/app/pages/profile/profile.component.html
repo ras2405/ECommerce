@@ -1,0 +1,79 @@
+<div class="container mt-4">
+    <h2>User profile</h2>
+    <div *ngIf="!editMode">
+      <p><strong>Email:</strong> {{ user.email }}</p>
+      <p><strong>Password:</strong> {{ user.password }}</p>
+      <p><strong>Adress:</strong> {{ user.address }}</p>
+      <button class="btn btn-primary" (click)="editModeOn()">Edit data</button>
+      <button type="button" class="btn btn-danger" (click)="openConfirmLogoutModal()">Log out</button>
+    </div>
+
+
+    <ng-template #confirmLogoutModal let-modal>
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Logout confirmation</h1>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to log out?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" (click)="modal.dismiss('No click')">No</button>
+        <button type="button" class="btn btn-danger" (click)="logout(); modal.close('Yes click')">Yes</button>
+      </div>
+    </ng-template>
+  
+    <div *ngIf="editMode" class="mb-3">
+      <form (submit)="saveChanges()">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" [ngModelOptions]="{standalone: true}" [(ngModel)]="user.email" required>
+          </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" class="form-control" id="password" [ngModelOptions]="{standalone: true}" [(ngModel)]="user.password" required>
+          </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input type="text" class="form-control" id="address" [ngModelOptions]="{standalone: true}" [(ngModel)]="user.address" required>
+        </div>
+        <div *ngIf="errorResponse" class="text-danger mt-2">
+            {{ errorResponse.errorMessage }}
+        </div>
+        <button type="submit" class="btn btn-success">Save Changes</button>
+      </form>
+    </div>
+
+    <div *ngIf="!editMode && user.rol != 0" class="mt-4">
+      <h3 class="mb-3">{{ shoppingHistory.length > 0 ? 'Shopping History:' : 'There is no shopping history available. You should buy something!' }}</h3>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Payment Method</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Discount</th>
+                  <th scope="col">Promotion</th>
+                  <th scope="col">Detail</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let purchase of shoppingHistory; let i = index">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>{{ purchase.date | date:'yyyy-MM-dd HH:mm:ss' }}</td>
+                  <td>{{ getPaymentMethodText(purchase.paymentMethod) }}</td>
+                  <td>{{ getPrice(purchase.products, purchase.promotion.amount)}}</td>
+                  <td>{{ purchase.promotion.amount }}</td>
+                  <td>{{ getPromotionTypeText(purchase.promotion.type) }}</td>
+                  <td>
+                    <button class="btn btn-primary" (click)="goToPurchaseDetails(purchase.id)">Detail</button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>  
+</div>
+ 

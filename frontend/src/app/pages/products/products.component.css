@@ -1,0 +1,23 @@
+.card-img-top {
+  object-fit: cover;
+}
+
+.card-bg{
+    background-color: #e6e6e6;
+    border-style: solid;
+    border-color: #cecece;
+    border-radius: 10%;
+}
+
+.spacing-elem{
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.spacing-right{
+  margin-right: 15px;
+}
+
+.spacing-left{
+  margin-left: 15px;
+}

@@ -1,0 +1,22 @@
+<div class="w-50 mx-auto mt-5">
+    <ul ngbNav #nav="ngbNav" [(activeId)]="activeTab" class="nav nav-pills nav-justified ">
+        <li [ngbNavItem]="1">
+            <button ngbNavLink (click)="switchToTab(1)">Login</button>
+            <ng-template ngbNavContent>
+                <div class="tab-pane fade show active" id="pills-login" role="tabpanel">
+                    <app-login-form></app-login-form>
+                </div>
+            </ng-template>
+        </li>
+        <li [ngbNavItem]="2">
+            <button ngbNavLink (click)="switchToTab(2)">Sign up</button>
+            <ng-template ngbNavContent>
+                <div class="tab-pane fade show active" id="pills-register" role="tabpanel">
+                    <app-signup-form></app-signup-form>
+                </div>
+            </ng-template>
+        </li>
+    </ul>
+
+    <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>

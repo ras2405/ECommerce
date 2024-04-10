@@ -1,0 +1,10 @@
+<div class="card m-3 d-flex flex-row justify-content-between align-items-center">
+    <div class="d-flex flex-row align-items-center">
+        <img src="/assets/product.png" style="height: 100px; width: 100px;" class="card-img-top" alt="Product Image">
+        <div class="card-body">
+            <h6 class="card-title" style="color: var(--secondary-color);">{{ product?.name }}</h6>
+            <p class="card-text">${{ product?.price }}</p>
+        </div>
+    </div>
+    <button class="btn btn-danger mx-3" (click)="onDeleteClick()">Delete</button>
+</div>
