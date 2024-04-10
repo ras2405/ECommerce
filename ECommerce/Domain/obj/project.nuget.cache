@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "cc+3SKx6wtpBE6LTaqMyR3ylela6JSyplFFa4ldCUKIlSmby8DjJyObpXmsIC0IXMw7vPDDdiZaeS8Xm/wQ0Bg==",
+  "success": true,
+  "projectFilePath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\celes\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\celes\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\celes\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

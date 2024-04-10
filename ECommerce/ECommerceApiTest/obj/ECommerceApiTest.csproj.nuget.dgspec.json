@@ -1,0 +1,889 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApiTest\\ECommerceApiTest.csproj": {}
+  },
+  "projects": {
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\DataAccess\\DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\DataAccess\\DataAccess.csproj",
+        "projectName": "DataAccess",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\RepositoryInterface.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\RepositoryInterface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\Exceptions.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\Exceptions.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApiTest\\ECommerceApiTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApiTest\\ECommerceApiTest.csproj",
+        "projectName": "ECommerceApiTest",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApiTest\\ECommerceApiTest.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApiTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApi\\ECommerceApi.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApi\\ECommerceApi.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApi\\ECommerceApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApi\\ECommerceApi.csproj",
+        "projectName": "ECommerceApi",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApi\\ECommerceApi.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ECommerceApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\Exceptions.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\Exceptions.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ServiceFactory\\ServiceFactory.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ServiceFactory\\ServiceFactory.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\Exceptions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\Exceptions.csproj",
+        "projectName": "Exceptions",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\Exceptions.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj",
+        "projectName": "LogicInterfaces",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Logic\\Logic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Logic\\Logic.csproj",
+        "projectName": "Logic",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Logic\\Logic.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Logic\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\Exceptions.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Exceptions\\Exceptions.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\RepositoryInterface.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\RepositoryInterface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "System.Reflection": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\RepositoryInterface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\RepositoryInterface.csproj",
+        "projectName": "RepositoryInterface",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\RepositoryInterface.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ServiceFactory\\ServiceFactory.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ServiceFactory\\ServiceFactory.csproj",
+        "projectName": "ServiceFactory",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ServiceFactory\\ServiceFactory.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ServiceFactory\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\DataAccess\\DataAccess.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Logic\\Logic.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Logic\\Logic.csproj"
+              },
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\RepositoryInterface.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\RepositoryInterface\\RepositoryInterface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj",
+        "projectName": "WebModels",
+        "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj",
+        "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+        "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.29, 6.0.29]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

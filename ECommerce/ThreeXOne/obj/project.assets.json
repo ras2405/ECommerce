@@ -1,0 +1,169 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0": {
+      "Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Exceptions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Domain.dll": {}
+        }
+      },
+      "Exceptions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Exceptions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Exceptions.dll": {}
+        }
+      },
+      "LogicInterfaces/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "WebModels": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LogicInterfaces.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogicInterfaces.dll": {}
+        }
+      },
+      "WebModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebModels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Exceptions/1.0.0": {
+      "type": "project",
+      "path": "../Exceptions/Exceptions.csproj",
+      "msbuildProject": "../Exceptions/Exceptions.csproj"
+    },
+    "LogicInterfaces/1.0.0": {
+      "type": "project",
+      "path": "../LogicInterfaces/LogicInterfaces.csproj",
+      "msbuildProject": "../LogicInterfaces/LogicInterfaces.csproj"
+    },
+    "WebModels/1.0.0": {
+      "type": "project",
+      "path": "../WebModels/WebModels.csproj",
+      "msbuildProject": "../WebModels/WebModels.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0": [
+      "Domain >= 1.0.0",
+      "LogicInterfaces >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\celes\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ThreeXOne\\ThreeXOne.csproj",
+      "projectName": "ThreeXOne",
+      "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ThreeXOne\\ThreeXOne.csproj",
+      "packagesPath": "C:\\Users\\celes\\.nuget\\packages\\",
+      "outputPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ThreeXOne\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\celes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "projectReferences": {
+            "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\Domain\\Domain.csproj"
+            },
+            "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj": {
+              "projectPath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\LogicInterfaces\\LogicInterfaces.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net6.0": {
+        "targetAlias": "net6.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.29, 6.0.29]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.29, 6.0.29]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.29, 6.0.29]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

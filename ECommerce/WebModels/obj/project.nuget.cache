@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "wSoMKf4D6XxjDPIcXrj3/CslAc77qLbrk8nCjEP9iQiF1KXs1GtD6sA1bkhWEjLWiuIliHZEfQ0kVU2h5bG7Ww==",
+  "success": true,
+  "projectFilePath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\WebModels\\WebModels.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\celes\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\celes\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\celes\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "CPSjX8ukxU6EU6ImRACTM4+/XFtAOme+CzlCyeyA3xJ8LCWyqwhxAiH4GZ9GxzEwdgCFYl7uVxzY6ih4N/eoZQ==",
+  "success": true,
+  "projectFilePath": "D:\\DOCUMENTOS\\free time\\ECommerce\\ECommerce\\ThreeXOne\\ThreeXOne.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\celes\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\celes\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\celes\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}
